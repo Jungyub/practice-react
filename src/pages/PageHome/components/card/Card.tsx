@@ -1,13 +1,11 @@
 import { ReactElement } from "react";
 import styled from "styled-components";
+import { Todo } from "../../../../modules/todos";
 
-type ICard = {
-  id: number;
-  text: string;
-  isToggle: boolean;
+interface ICard extends Todo {
   handleClickToggle: (id: number) => void;
   handleClickRemove: (id: number) => void;
-};
+}
 
 const Card = ({
   id,
